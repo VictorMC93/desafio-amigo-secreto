@@ -14,10 +14,11 @@ function agregarAmigo() { //Funcion para agregar nombres a array
 }
 function generarListaAmigos(){
     let listaAmigos = document.getElementById("listaAmigos");
-    for (i = 0; i <= amigosLista.length; i++) {
-        let lista = document.createElement("lista");
-        lista.innerHTML=amigosLista[i];
-        listaAmigos.appendChild(lista); 
+    listaAmigos.innerHTML = ""
+    for (i = 0; i < amigosLista.length; ++i) {
+        let li = document.createElement('li');
+        li.innerText = amigosLista[i];
+        listaAmigos.appendChild(li); 
     }
     return;
 }
